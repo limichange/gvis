@@ -4,7 +4,8 @@
   "description": "A Javascript Canvas Library Powered By Weeb",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "jest": "25.4.0",
     "lerna": "3.20.2",
     "rollup": "2.7.2",
+    "ts-jest": "^25.4.0",
     "typescript": "3.8.3"
   }
 }

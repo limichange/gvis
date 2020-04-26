@@ -31,10 +31,7 @@ describe('bus', () => {
     const function1 = jest.fn()
     const function2 = jest.fn()
 
-    bus
-      .on('click', function1)
-      .on('dbclick', function2)
-      .clear('click')
+    bus.on('click', function1).on('dbclick', function2).clear('click')
 
     expect(bus.getCallbackList('click')).toHaveLength(0)
     expect(bus.getCallbackList('dbclick')).toHaveLength(1)

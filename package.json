@@ -10,8 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/limichange/gvis.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "canvas"
+  ],
+  "author": "limichange<limichange@hotmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/limichange/gvis/issues"

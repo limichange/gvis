@@ -1,7 +1,7 @@
 {
   "name": "gvis",
   "version": "0.0.1",
-  "description": "A Javascript Canvas Library Power By Weeb",
+  "description": "A Javascript Canvas Library Powered By Weeb",
   "main": "index.js",
   "scripts": {
     "test": "jest"

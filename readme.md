@@ -1,6 +1,6 @@
 # Gvis
 
-A Javascript Canvas Library Power By Weeb
+A Javascript Canvas Library Powered By Weeb
 
 ## tools
 

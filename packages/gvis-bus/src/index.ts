@@ -16,21 +16,21 @@ export default class Bus {
   }
 
   on(eventName: string, callback: Function, once: boolean = false) {
-    if (!this.store[eventName]) this.store[eventName] = []
-
-    this.store[eventName].push({
+    this.getCallbackList(eventName).push({
       eventName,
       callback,
       once,
     })
+
+    return this
   }
 
   off(eventName: string, callback: Function) {
-    const { store } = this
-
-    store[eventName] = store[eventName].filter((eventConfig: EventConfig) => {
-      return eventConfig.callback !== callback
-    })
+    this.store[eventName] = this.getCallbackList(eventName).filter(
+      (eventConfig: EventConfig) => {
+        return eventConfig.callback !== callback
+      }
+    )
   }
 
   once(eventName: string, callback: Function) {
@@ -42,8 +42,10 @@ export default class Bus {
       this.store = {}
     } else {
       const callbackList = this.getCallbackList(eventName)
-      return callbackList.splice(0, callbackList.length)
+      callbackList.splice(0, callbackList.length)
     }
+
+    return this
   }
 
   emit(eventName: string, ...args: any[]) {
@@ -60,5 +62,7 @@ export default class Bus {
       .forEach((eventConfig) => {
         this.off(eventName, eventConfig.callback)
       })
+
+    return this
   }
 }

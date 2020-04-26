@@ -28,12 +28,13 @@ describe('bus', () => {
 
   it('clear one type event handler', () => {
     const bus = new Bus()
-    const fn1 = jest.fn()
-    const fn2 = jest.fn()
+    const function1 = jest.fn()
+    const function2 = jest.fn()
 
-    bus.on('click', fn1)
-    bus.on('dbclick', fn2)
-    bus.clear('click')
+    bus
+      .on('click', function1)
+      .on('dbclick', function2)
+      .clear('click')
 
     expect(bus.getCallbackList('click')).toHaveLength(0)
     expect(bus.getCallbackList('dbclick')).toHaveLength(1)

@@ -21,10 +21,14 @@ module.exports = {
     '!packages/size-check/**',
     '!packages/runtime-core/src/profiling.ts',
   ],
-  watchPathIgnorePatterns: ['/node_modules/', '/dist/', '/.git/'],
+  watchPathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    '/.git/',
+  ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   moduleNameMapper: {
-    '^gvis-(.*?)$': '<rootDir>/packages/$1/src',
+    '^@nextvis(.*?)$': '<rootDir>/packages/$1/src',
   },
   rootDir: __dirname,
   // testMatch: ['<rootDir>/packages/**/__tests__/**/*spec.[jt]s?(x)'],

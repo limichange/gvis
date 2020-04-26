@@ -8,7 +8,8 @@
   },
   "keywords": [],
   "dependencies": {
-    "@nextvis/utils": "0.0.1"
+    "@nextvis/utils": "0.0.1",
+    "@nextvis/bus": "0.0.1"
   },
   "author": "",
   "license": "ISC"

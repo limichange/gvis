@@ -1,7 +1,6 @@
 interface EventConfig {
   once: boolean
   callback: Function
-  eventName: string
 }
 
 export default class Bus {
@@ -21,7 +20,6 @@ export default class Bus {
     once: boolean = false
   ) {
     this.getCallbackList(eventName).push({
-      eventName,
       callback,
       once,
     })

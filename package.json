@@ -4,7 +4,7 @@
   "description": "A Javascript Canvas Library Powered By Weeb",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
   "repository": {

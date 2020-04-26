@@ -47,20 +47,18 @@ export default class Bus {
   }
 
   emit(eventName: string, ...args: any[]) {
-    const callbackList = this.store[eventName]
+    const callbackList = this.getCallbackList(eventName)
 
-    if (callbackList) {
-      callbackList
-        .filter((eventConfig: EventConfig) => {
-          eventConfig.callback(...args)
+    callbackList
+      .filter((eventConfig: EventConfig) => {
+        eventConfig.callback(...args)
 
-          if (eventConfig.once) {
-            return eventConfig
-          }
-        })
-        .forEach((eventConfig) => {
-          this.off(eventName, eventConfig.callback)
-        })
-    }
+        if (eventConfig.once) {
+          return eventConfig
+        }
+      })
+      .forEach((eventConfig) => {
+        this.off(eventName, eventConfig.callback)
+      })
   }
 }

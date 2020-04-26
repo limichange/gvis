@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/limichange/gvis/issues"
   },
-  "homepage": "https://github.com/limichange/gvis#readme"
+  "homepage": "https://github.com/limichange/gvis#readme",
+  "devDependencies": {
+    "chalk": "^4.0.0",
+    "lerna": "^3.20.2"
+  }
 }

@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A Javascript Canvas Library Powered By Weeb",
   "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "jest --watch"

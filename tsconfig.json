@@ -18,6 +18,9 @@
     "jsx": "preserve",
     "lib": ["esnext", "dom"],
     "types": ["jest", "puppeteer", "node"],
+    "paths": {
+      "@nextvis/*": ["packages/*/src"]
+    },
     "rootDir": "."
   },
   "include": [

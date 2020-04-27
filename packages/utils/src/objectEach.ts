@@ -1,23 +1,22 @@
 import { isObject } from './type'
 
 interface eachFunction {
-  (item: any, index: string): unknown
+  (item: any, key: any): unknown
 }
 
 export default function each(
-  elements: object | null | undefined,
+  object: any,
   func: eachFunction
 ): void {
-  if (!isObject(elements)) {
+  if (!isObject(object)) {
     return
   }
 
   let result
 
-  for (let k in elements) {
-    if (elements.hasOwnProperty(k)) {
-      // @ts-ignore
-      result = func(elements[k], k)
+  for (let key in object) {
+    if (object.hasOwnProperty(key)) {
+      result = func(object[key], key)
       if (result === false) {
         break
       }

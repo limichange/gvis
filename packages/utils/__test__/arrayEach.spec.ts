@@ -2,19 +2,19 @@ import each from '../src/arrayEach'
 
 describe('each', () => {
   it('null', () => {
-    let fn = jest.fn()
+    const fn = jest.fn()
     each(null, fn)
     expect(fn).not.toBeCalled()
   })
 
   it('each array', () => {
-    let i = 0
+    const fn = jest.fn()
     const a = [1, 2, 3, 4]
     each<number>(a, (item: number, j) => {
       expect(item).toEqual(a[j])
-      i++
+      fn()
     })
-    expect(i).toEqual(a.length)
+    expect(fn).toBeCalledTimes(a.length)
   })
 
   it('each break', () => {

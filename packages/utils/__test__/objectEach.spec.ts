@@ -8,18 +8,24 @@ describe('each', () => {
   })
 
   it('each object', () => {
-    let i = 0
-    const object: Record<string, number> = {
-      a: 1,
-      b: 2,
-      c: 3,
-    }
+    let fn = jest.fn()
+
+    function A() {}
+
+    A.prototype.name = 'test'
+
+    let object = new (A as any)()
+
+    Object.assign(object, {
+      name2: 'test2',
+      name3: 'test3',
+    })
 
     each(object, (item, j) => {
       expect(item).toEqual(object[j])
-      i++
+      fn()
     })
-    expect(i).toEqual(3)
+    expect(fn).toBeCalledTimes(2)
   })
 
   it('each break', () => {

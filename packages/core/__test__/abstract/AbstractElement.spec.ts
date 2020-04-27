@@ -2,14 +2,14 @@ import AbstractElement from '../../src/abstract/AbstractElement'
 
 describe('abstract class Element', () => {
   it('new', () => {
-    const type = 'PureElement'
+    const name = 'PureElement'
 
     class PureElement extends AbstractElement {
-      type: string = type
+      name: string = name
     }
 
     let pureElement = new PureElement()
 
-    expect(pureElement.type).toEqual(type)
+    expect(pureElement.name).toEqual(name)
   })
 })

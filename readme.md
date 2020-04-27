@@ -12,3 +12,4 @@ A Javascript Canvas Library Powered By Weeb
 - [drichard/mindmaps](https://github.com/drichard/mindmaps)
 - [vega/vega](https://github.com/vega/vega)
 - [pixijs/pixi.js](https://github.com/pixijs/pixi.js)
+- [airingursb/canvas](https://airingursb.gitbooks.io/canvas/08.html)

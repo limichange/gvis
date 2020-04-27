@@ -8,6 +8,8 @@ describe('Gvis', () => {
   })
 
   it('new', () => {
+    document.body.innerHTML = `<canvas id="el" />`
+
     let gvis = new Gvis({
       id: 'el',
     })

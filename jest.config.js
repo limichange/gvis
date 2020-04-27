@@ -37,4 +37,5 @@ module.exports = {
       // to coverage and can cause netlify builds to fail
       ['/node_modules/', '/examples/__tests__']
     : ['/node_modules/'],
+  setupFiles: ['jest-canvas-mock'],
 }

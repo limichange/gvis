@@ -1,9 +1,7 @@
-import Gvis from '../src'
+import { Gvis } from '../src'
 
-describe('Gvis', () => {
-  it('new', () => {
-    let gvis = new Gvis()
-
-    expect(gvis).toBeDefined()
+describe('index', () => {
+  it('export is ok', () => {
+    expect(Gvis).toBeDefined()
   })
 })

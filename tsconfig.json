@@ -19,7 +19,8 @@
     "lib": ["esnext", "dom"],
     "types": ["jest", "puppeteer", "node"],
     "paths": {
-      "@nextvis/*": ["packages/*/src"]
+      "@nextvis/*": ["packages/*/src"],
+      "gvis": ["packages/gvis/src"]
     },
     "rootDir": "."
   },

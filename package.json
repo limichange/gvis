@@ -29,6 +29,7 @@
     "@types/puppeteer": "2.0.1",
     "chalk": "4.0.0",
     "jest": "25.4.0",
+    "jest-canvas-mock": "2.2.0",
     "lerna": "3.20.2",
     "rollup": "2.7.2",
     "ts-jest": "25.4.0",

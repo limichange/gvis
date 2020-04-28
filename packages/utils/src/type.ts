@@ -2,13 +2,34 @@ function toString(any: any): string {
   return Object.prototype.toString.apply(any).slice(8, -1)
 }
 
-function equal(any: any, type: string) {
-  return toString(any) === type
+function check(val: unknown, type: string) {
+  return toString(val) === type
 }
 
-export const isObject = (any: any) => equal(any, 'Object')
-export const isArray = (any: any) => equal(any, 'Array')
-export const isPromise = (any: any) => equal(any, 'Promise')
-export const isSymbol = (any: any) => equal(any, 'Symbol')
-export const isNumber = (any: any) => equal(any, 'Number')
-export const isString = (any: any) => equal(any, 'String')
+export function isObject(val: unknown): val is Record<any, any> {
+  return check(val, 'Object')
+}
+
+export function isArray<T = any>(val: unknown): val is Array<T> {
+  return check(val, 'Array')
+}
+
+export function isPromise<T = any>(val: unknown): val is Promise<T> {
+  return check(val, 'Promise')
+}
+
+export function isSymbol(val: unknown): val is Symbol {
+  return check(val, 'Symbol')
+}
+
+export function isNumber(val: unknown): val is number {
+  return check(val, 'Number')
+}
+
+export function isString(val: unknown): val is string {
+  return check(val, 'String')
+}
+
+export function isFunction(val: unknown): val is Function {
+  return check(val, 'Function')
+}

@@ -5,6 +5,7 @@ import {
   isSymbol,
   isNumber,
   isString,
+  isFunction,
 } from '../src/type'
 
 describe('gvis utils type', () => {
@@ -30,5 +31,9 @@ describe('gvis utils type', () => {
 
   it('check String', () => {
     expect(isString('ok')).toEqual(true)
+  })
+
+  it('check Function', () => {
+    expect(isFunction(() => {})).toEqual(true)
   })
 })

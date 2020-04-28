@@ -1,7 +1,9 @@
-import { Gvis } from '../src'
+import { Gvis, logger } from '../src'
 
 describe('Gvis', () => {
   it('new', () => {
+    logger.isDev = false
+
     let gvis = new Gvis({})
 
     expect(gvis).toBeDefined()

@@ -1,6 +1,7 @@
 import Bus from '@nextvis/bus'
 import CanvasRender from '@nextvis/canvasRender'
 import { isString } from '@nextvis/utils'
+import logger from './utils/logger'
 
 type GvisConfig = {
   id?: string
@@ -23,7 +24,7 @@ export default class Gvis extends Bus {
 
     // check config id
     if (__DEV__ && !isString(cfg.id)) {
-      console.warn(`Config id is unvalid: ${cfg.id}`)
+      logger.warn(`Config id is unvalid: ${cfg.id}`)
     }
 
     // find element
@@ -31,13 +32,25 @@ export default class Gvis extends Bus {
 
     // check element is ok
     if (!this.el && __DEV__) {
-      console.warn(
-        `Element not found or is empty: ${cfg.id}`
-      )
+      logger.warn(`Element not found or is empty: ${cfg.id}`)
       return
     }
 
     // save config
     Object.assign(this.cfg, cfg)
+
+    this.emit('init')
+  }
+
+  add() {
+    // todo
+  }
+
+  remove() {
+    // todo
+  }
+
+  register() {
+    // todo
   }
 }

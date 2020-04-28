@@ -1,7 +1,6 @@
-const offscreenCtxStore: Record<
-  string,
-  CanvasRenderingContext2D | null
-> = {}
+import { createElement } from './element'
+
+const offscreenCtxStore: Record<string, CanvasRenderingContext2D | null> = {}
 
 export function getOffScreenContext(
   key: string = 'global',
@@ -11,9 +10,8 @@ export function getOffScreenContext(
   }
 ) {
   if (!offscreenCtxStore[key]) {
-    const canvas = document.createElement('canvas')
-    canvas.width = config.width
-    canvas.height = config.height
+    const canvas = createElement('canvas', config) as HTMLCanvasElement
+
     offscreenCtxStore[key] = canvas.getContext('2d')
   }
   return offscreenCtxStore[key]

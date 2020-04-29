@@ -6,7 +6,9 @@ orbs:
 
 step_restore_cache: &restore_cache
   restore_cache:
-    keys: dependency-cache-{{ checksum "package-lock.json" }}
+    keys:
+      - v1-dependencies-{{ checksum "package.json" }}
+      - v1-dependencies-
 
 step_install_deps: &install_deps
   run:
@@ -17,7 +19,7 @@ step_save_cache: &save_cache
   save_cache:
     paths:
       - node_modules
-    key: dependency-cache-{{ checksum "package-lock.json" }}
+    key: v1-dependencies-{{ checksum "package.json" }}
 
 jobs:
   test:
@@ -31,6 +33,7 @@ jobs:
       - run: npm run ls-lint
       - run: npm test --ci --runInBand
       - run: npm run test:report
+      - export CODACY_PROJECT_TOKEN=357b903a671e4f21bd1646b4d07ab7da
       - coverage-reporter/send_report
 
 workflows:

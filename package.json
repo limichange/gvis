@@ -10,7 +10,8 @@
     "build": "node scripts/build.js",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "ls-lint": "ls-lint"
+    "ls-lint": "ls-lint",
+    "test:report": "codecov --token=4b8dbcb1-1085-4e20-88ce-dcc9ba7a2d05"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,10 @@
   "bugs": {
     "url": "https://github.com/limichange/gvis/issues"
   },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "homepage": "https://github.com/limichange/gvis#readme",
   "devDependencies": {
     "@ls-lint/ls-lint": "1.8.1",
@@ -31,6 +36,7 @@
     "@types/node": "13.13.2",
     "@types/puppeteer": "2.0.1",
     "chalk": "4.0.0",
+    "codecov": "^3.6.5",
     "jest": "25.4.0",
     "jest-canvas-mock": "2.2.0",
     "lerna": "3.20.2",

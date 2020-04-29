@@ -26,6 +26,10 @@
     "url": "https://github.com/limichange/gvis/issues"
   },
   "homepage": "https://github.com/limichange/gvis#readme",
+  "gitHooks": {
+    "pre-commit": "ls-lint && lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
   "devDependencies": {
     "@ls-lint/ls-lint": "1.8.1",
     "@types/jest": "25.2.1",

@@ -11,7 +11,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "ls-lint": "ls-lint",
-    "test:report": "codecov --token=4b8dbcb1-1085-4e20-88ce-dcc9ba7a2d05"
+    "test:report": "codecov"
   },
   "repository": {
     "type": "git",

@@ -33,7 +33,6 @@ jobs:
       - run: npm run ls-lint
       - run: npm test --ci --runInBand
       - run: npm run test:report
-      - export CODACY_PROJECT_TOKEN=357b903a671e4f21bd1646b4d07ab7da
       - coverage-reporter/send_report
 
 workflows:

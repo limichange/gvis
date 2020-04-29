@@ -32,10 +32,7 @@ jobs:
       - run: npm run ls-lint
       - run: npm test --ci --runInBand
       - run: npm run test:report
-      - run:
-        command: |
-          export CODACY_REPORTER_VERSION=latest
-          bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Javascript -r ./coverage/lcov.info
+      - run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Javascript -r ./coverage/lcov.info
 
 workflows:
   version: 2

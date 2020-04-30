@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "outDir": "dist",
     "sourceMap": false,
-    "target": "es6",
+    "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
     "allowJs": false,
@@ -31,5 +31,5 @@
     "packages/*/__tests__",
     "test-dts"
   ],
-  "exclude": ["node_modules", "**/node_modules/*"]
+  "exclude": ["node_modules", "**/node_modules/*", "**/dist/*"]
 }

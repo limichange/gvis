@@ -1,12 +1,23 @@
 {
   "name": "gvis",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "gvis",
+  "keywords": [
+    "canvas"
+  ],
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "module": "dist/reactivity.esm-bundler.js",
+  "types": "dist/reactivity.d.ts",
+  "unpkg": "dist/reactivity.global.js",
+  "jsdelivr": "dist/reactivity.global.js",
+  "author": "limichange",
+  "license": "MIT",
+  "buildOptions": {
+    "name": "Gvis",
+    "formats": [
+      "esm",
+      "cjs",
+      "global"
+    ]
+  }
 }

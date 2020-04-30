@@ -1,5 +1,5 @@
 {
-  "name": "canvas-render",
+  "name": "@nextvis/canvas-render",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",

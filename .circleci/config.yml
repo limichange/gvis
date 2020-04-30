@@ -3,8 +3,8 @@ version: 2.1
 orbs:
   node: circleci/node@2.0.3
 
-defaults: &default
-  executor: 
+defaults: &defaults
+  executor:
     name: node/default
 
 step_restore_cache: &restore_cache
@@ -35,8 +35,8 @@ jobs:
       - run: npm run ls-lint
       - run: npm test --ci --runInBand
       - run: npm run test:report
-  
-  build: 
+
+  build:
     <<: *defaults
     steps:
       - checkout

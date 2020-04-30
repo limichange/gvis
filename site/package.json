@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "parcel index.html"
   },
-  "keywords": [],
+  "keywords": [
+    "canvas"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "less": "3.11.1",
     "parcel": "1.12.4"
   }
 }

@@ -1,9 +1,8 @@
 import { Gvis } from '../packages/gvis'
+import './index.less'
 
-export default () => {
-  console.log(
-    new Gvis({
-      id: 'app',
-    })
-  )
-}
+console.log(
+  new Gvis({
+    id: 'app',
+  })
+)

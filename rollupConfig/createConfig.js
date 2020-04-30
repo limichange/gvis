@@ -1,5 +1,6 @@
 import path from 'path'
 import ts from 'rollup-plugin-typescript2'
+import { createReplacePlugin } from './createReplacePlugin'
 import typescript from 'typescript'
 import json from '@rollup/plugin-json'
 import { resolve, pkg } from './pathUtils'
@@ -40,6 +41,7 @@ export function createConfig(format, output) {
         namedExports: false,
       }),
       tsPlugin,
+      createReplacePlugin(),
     ],
     output,
     onwarn: (msg, warn) => {

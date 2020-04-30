@@ -14,11 +14,7 @@ export default class Bus {
     return store[eventName]
   }
 
-  on(
-    eventName: string,
-    callback: Function,
-    once: boolean = false
-  ) {
+  on(eventName: string, callback: Function, once: boolean = false) {
     this.getCallbackList(eventName).push({
       callback,
       once,
@@ -28,11 +24,11 @@ export default class Bus {
   }
 
   off(eventName: string, callback: Function) {
-    this.store[eventName] = this.getCallbackList(
-      eventName
-    ).filter((eventConfig: EventConfig) => {
-      return eventConfig.callback !== callback
-    })
+    this.store[eventName] = this.getCallbackList(eventName).filter(
+      (eventConfig: EventConfig) => {
+        return eventConfig.callback !== callback
+      }
+    )
 
     return this
   }

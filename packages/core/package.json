@@ -1,6 +1,6 @@
 {
   "name": "@nextvis/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,8 @@
   },
   "keywords": [],
   "dependencies": {
-    "@nextvis/utils": "0.0.1",
-    "@nextvis/bus": "0.0.1"
+    "@nextvis/bus": "^0.0.2",
+    "@nextvis/utils": "^0.0.2"
   },
   "author": "",
   "license": "ISC",

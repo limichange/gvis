@@ -12,5 +12,13 @@
     "@nextvis/bus": "0.0.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "buildOptions": {
+    "name": "GvisCore",
+    "formats": [
+      "esm",
+      "cjs",
+      "global"
+    ]
+  }
 }

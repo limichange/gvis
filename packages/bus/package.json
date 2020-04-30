@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "module": "dist/gvis-bus.esm.js",
+  "types": "dist/gvis-bus.d.ts",
+  "unpkg": "dist/gvis-bus.global.js",
+  "jsdelivr": "dist/gvis-bus.global.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

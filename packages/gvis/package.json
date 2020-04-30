@@ -19,5 +19,8 @@
       "cjs",
       "global"
     ]
+  },
+  "dependencies": {
+    "@nextvis/bus": "0.0.1"
   }
 }

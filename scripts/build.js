@@ -31,8 +31,6 @@ async function build(target) {
   const env = devOnly ? 'development' : 'production'
   const formats = pkg.buildOptions.formats
 
-  console.log(formats)
-
   await execa(
     'rollup',
     [
@@ -52,4 +50,18 @@ async function build(target) {
     ],
     { stdio: 'inherit' }
   )
+
+  try {
+    const res = await execa.command(
+      `api-extractor run -v -c packages/${target}/api-extractor.json`,
+      [],
+      {
+        preferLocal: true,
+      }
+    )
+
+    console.log(res.stdout)
+  } catch (e) {
+    console.log(e)
+  }
 }

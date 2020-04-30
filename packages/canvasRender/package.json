@@ -7,6 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "limichange",
+  "license": "MIT",
+  "buildOptions": {
+    "name": "GvisCanvasRender",
+    "formats": [
+      "esm",
+      "cjs",
+      "global"
+    ]
+  }
 }

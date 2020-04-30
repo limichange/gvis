@@ -9,6 +9,7 @@
     "allowJs": false,
     "strict": true,
     "declaration": true,
+    "declarationMap": true,
     "noUnusedLocals": true,
     "importHelpers": true,
     "experimentalDecorators": true,

@@ -5,6 +5,7 @@ import logger from './utils/logger'
 
 type GvisConfig = {
   id?: string
+  el?: HTMLElement
   width?: number
   height?: number
   autoUpdate?: boolean
@@ -23,12 +24,12 @@ export default class Gvis extends Bus {
     super()
 
     // check config id
-    if (__DEV__ && !isString(cfg.id)) {
+    if (!cfg.el && __DEV__ && !isString(cfg.id)) {
       logger.warn(`Config id is unvalid: ${cfg.id}`)
     }
 
     // find element
-    this.el = document.querySelector(`#${cfg.id}`)
+    this.el = cfg.el ?? document.querySelector(`#${cfg.id}`)
 
     // check element is ok
     if (!this.el && __DEV__) {

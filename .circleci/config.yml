@@ -3,8 +3,9 @@ version: 2.1
 orbs:
   node: circleci/node@2.0.3
 
-executor: &default
-  name: node/default
+defaults: &default
+  executor: 
+    name: node/default
 
 step_restore_cache: &restore_cache
   restore_cache:

@@ -15,6 +15,9 @@ if (!commitRE.test(msg)) {
       chalk.red(
         `  Proper commit message format is required for automated changelog generation. Examples:\n\n`
       ) +
+      `    ${chalk.green(
+        `some type you can use: feat | fix | docs | dx | style | refactor | perf | test | workflow | build | ci | chore | types | wip | release\n`
+      )}` +
       `    ${chalk.green(`feat(compiler): add 'comments' option`)}\n` +
       `    ${chalk.green(
         `fix(v-model): handle events on blur (close #28)`

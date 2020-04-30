@@ -1,6 +1,6 @@
 {
   "name": "@nextvis/core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,8 +16,8 @@
     "url": "git+https://github.com/nextvis/gvis.git"
   },
   "dependencies": {
-    "@nextvis/bus": "^0.0.2",
-    "@nextvis/utils": "^0.0.2"
+    "@nextvis/bus": "^0.0.3",
+    "@nextvis/utils": "^0.0.3"
   },
   "author": "",
   "license": "ISC",

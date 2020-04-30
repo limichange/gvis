@@ -1,6 +1,6 @@
 {
   "name": "gvis",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "gvis",
   "keywords": [
     "canvas"
@@ -29,8 +29,8 @@
     ]
   },
   "dependencies": {
-    "@nextvis/bus": "^0.0.2",
-    "@nextvis/canvas-render": "^0.0.2",
-    "@nextvis/utils": "^0.0.2"
+    "@nextvis/bus": "^0.0.3",
+    "@nextvis/canvas-render": "^0.0.3",
+    "@nextvis/utils": "^0.0.3"
   }
 }

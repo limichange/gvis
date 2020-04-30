@@ -1,4 +1,4 @@
-# Gvis
+# Gvis (WIP 🚧)
 
 <p align="center">
   <img width="128" src="https://raw.githubusercontent.com/nextvis/gvis/master/assets/logo.png">
@@ -10,14 +10,50 @@
 
 A Javascript Canvas Library Powered By Weeb
 
-## tools
+## Install
+
+```bash
+$ npm i gvis --save
+# or
+$ yarn add gvis
+```
+
+## Usage
+
+```js
+import Gvis from 'gvis'
+
+const gvis = new Gvis({
+  el: '#id',
+  width: 200,
+  height: 200,
+})
+
+givs.addImage({
+  url: 'imageURL',
+  size: {
+    width: 200,
+    height: 200,
+  },
+})
+```
+
+## API document
+
+> todo
+
+## Dev Tools
 
 - [codacy](https://app.codacy.com/)
 
-## links
+## Relative Links
 
 - [fabricjs/fabric.js](https://github.com/fabricjs/fabric.js)
 - [drichard/mindmaps](https://github.com/drichard/mindmaps)
 - [vega/vega](https://github.com/vega/vega)
 - [pixijs/pixi.js](https://github.com/pixijs/pixi.js)
 - [airingursb/canvas](https://airingursb.gitbooks.io/canvas/08.html)
+
+## Author
+
+[limichange](https://github.com/limichange)

@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "gvis": "^0.0.1",
     "less": "3.11.1",
     "parcel": "1.12.4"
   }

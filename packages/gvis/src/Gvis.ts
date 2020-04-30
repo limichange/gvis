@@ -1,5 +1,5 @@
 import Bus from '@nextvis/bus'
-import CanvasRender from '@nextvis/canvasRender'
+import CanvasRender from '@nextvis/canvas-render'
 import { isString } from '@nextvis/utils'
 import logger from './utils/logger'
 import { createHTMLElement } from './utils/element'

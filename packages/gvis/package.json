@@ -21,6 +21,8 @@
     ]
   },
   "dependencies": {
-    "@nextvis/bus": "0.0.1"
+    "@nextvis/canvas-render": "0.0.1",
+    "@nextvis/bus": "0.0.1",
+    "@nextvis/utils": "0.0.1"
   }
 }

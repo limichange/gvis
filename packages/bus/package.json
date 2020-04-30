@@ -9,11 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "publishConfig": {
+  "buildOptions": {
     "name": "GvisBus",
     "formats": [
-      "esm-bundler",
-      "esm-browser",
+      "esm",
       "cjs",
       "global"
     ]

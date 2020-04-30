@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "buildOptions": {
+    "name": "GvisUtils",
+    "formats": [
+      "esm",
+      "cjs",
+      "global"
+    ]
+  }
 }

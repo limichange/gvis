@@ -1,11 +1,55 @@
-// const args = require('minimist')(process.argv.slice(2))
-// const targets = args._
-// const formats = args.formats || args.f
-// const devOnly = args.devOnly || args.d
+const fs = require('fs-extra')
+const path = require('path')
+const chalk = require('chalk')
+const execa = require('execa')
+const allTargets = require('./utils/targets')
+const commit = execa.sync('git', ['rev-parse', 'HEAD']).stdout.slice(0, 7)
+const devOnly = true
+const buildTypes = true
+const prodOnly = false
+const sourceMap = true
 
-// import fs from 'fs'
-// import { targets as allTargets } from './utils.js'
+buildAll(allTargets)
 
-const allTargets = require('./utils').targets
+async function buildAll(targets) {
+  for (const target of targets) {
+    console.log('build package: ' + chalk.greenBright(target))
+    await build(target)
+  }
+}
 
-console.log(allTargets)
+async function build(target) {
+  const pkgDir = path.resolve(`packages/${target}`)
+  const pkg = require(`${pkgDir}/package.json`)
+
+  console.log(pkg.buildOptions)
+
+  if (!pkg.buildOptions) return
+
+  await fs.remove(`${pkgDir}/dist`)
+
+  const env = devOnly ? 'development' : 'production'
+  const formats = pkg.buildOptions.formats
+
+  console.log(formats)
+
+  await execa(
+    'rollup',
+    [
+      '-c',
+      '--environment',
+      [
+        `COMMIT:${commit}`,
+        `NODE_ENV:${env}`,
+        `TARGET:${target}`,
+        formats ? `FORMATS:${formats}` : ``,
+        buildTypes ? `TYPES:true` : ``,
+        prodOnly ? `PROD_ONLY:true` : ``,
+        sourceMap ? `SOURCE_MAP:true` : ``,
+      ]
+        .filter(Boolean)
+        .join(','),
+    ],
+    { stdio: 'inherit' }
+  )
+}

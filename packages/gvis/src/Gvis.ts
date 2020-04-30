@@ -2,6 +2,7 @@ import Bus from '@nextvis/bus'
 import CanvasRender from '@nextvis/canvasRender'
 import { isString } from '@nextvis/utils'
 import logger from './utils/logger'
+import { createHTMLElement } from './utils/element'
 
 type GvisConfig = {
   id?: string
@@ -16,7 +17,8 @@ export default class Gvis extends Bus {
     autoUpdate: true,
   }
 
-  el: HTMLElement | null
+  el: HTMLElement | null = null
+  canvasEl: HTMLCanvasElement | null = null
 
   render = new CanvasRender()
 
@@ -40,7 +42,21 @@ export default class Gvis extends Bus {
     // save config
     Object.assign(this.cfg, cfg)
 
+    setTimeout(() => {
+      this.createCanvasElement()
+    })
     this.emit('init')
+  }
+
+  private createCanvasElement() {
+    const el = this.el!
+    const { width, height } = el.getBoundingClientRect()
+
+    this.canvasEl = createHTMLElement('canvas', {
+      parent: this.el,
+      width,
+      height,
+    }) as HTMLCanvasElement
   }
 
   add() {

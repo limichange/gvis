@@ -1,4 +1,4 @@
-import { Gvis } from '../packages/gvis'
+import { Gvis } from '../packages/gvis/src/index'
 import './index.less'
 
 console.log(

@@ -1,17 +1,17 @@
 type attsType = Record<string, any> & {
-  parent?: Element
+  parent?: HTMLElement | null
 }
 
-export function createElement(
+export function createHTMLElement(
   tagName: string,
-  attrs: attsType,
-  child?: Element
+  attrs?: attsType,
+  child?: HTMLElement
 ) {
   const element = document.createElement(tagName)
 
   Object.assign(element, attrs)
 
-  if (attrs.parent) {
+  if (attrs?.parent) {
     attrs.parent.appendChild(element)
   }
 

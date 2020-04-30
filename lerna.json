@@ -2,5 +2,17 @@
   "packages": [
     "packages/*"
   ],
+  "command": {
+    "publish": {
+      "ignoreChanges": [],
+      "message": "chore(release): publish",
+      "registry": "https://npm.pkg.github.com"
+    },
+    "bootstrap": {
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
+    }
+  },
   "version": "independent"
 }

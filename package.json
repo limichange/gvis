@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "node scripts/dev.js",
     "build": "node --trace-warnings scripts/build.js ",
     "test": "jest --coverage",
     "test:watch": "jest --watch",

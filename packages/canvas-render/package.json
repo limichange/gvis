@@ -8,6 +8,14 @@
   },
   "keywords": [],
   "author": "limichange",
+  "bugs": {
+    "url": "https://github.com/nextvis/gvis/issues"
+  },
+  "homepage": "https://github.com/nextvis/gvis#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextvis/gvis.git"
+  },
   "license": "MIT",
   "buildOptions": {
     "name": "GvisCanvasRender",

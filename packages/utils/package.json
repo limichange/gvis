@@ -7,6 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "bugs": {
+    "url": "https://github.com/nextvis/gvis/issues"
+  },
+  "homepage": "https://github.com/nextvis/gvis#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextvis/gvis.git"
+  },
   "author": "",
   "license": "ISC",
   "buildOptions": {

@@ -1,3 +1,5 @@
+// npm run dev -- -t gvis -f cjs
+
 const execa = require('execa')
 const chokidar = require('chokidar')
 const args = require('minimist')(process.argv.slice(2))
@@ -7,7 +9,7 @@ const sourceMap = args.sourcemap || args.s
 const commit = execa.sync('git', ['rev-parse', 'HEAD']).stdout.slice(0, 7)
 
 chokidar
-  .watch(`packages/${target}/dist/${target}.global.js`)
+  .watch(`packages/${target}/dist/${target}.cjs.js`)
   .on('change', async (event, path) => {
     console.log(event, path)
 

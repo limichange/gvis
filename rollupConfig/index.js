@@ -22,7 +22,8 @@ const outputConfigs = {
   },
 }
 
-const packageFormats = packageOptions.formats
+const inlineFormats = process.env.FORMATS && process.env.FORMATS.split(',')
+const packageFormats = inlineFormats || packageOptions.formats
 const packageConfigs = packageFormats.map((format) => {
   return createConfig(format, outputConfigs[format])
 })

@@ -53,6 +53,7 @@ givs.addImage({
 - [vega/vega](https://github.com/vega/vega)
 - [pixijs/pixi.js](https://github.com/pixijs/pixi.js)
 - [airingursb/canvas](https://airingursb.gitbooks.io/canvas/08.html)
+- [spritejs/spritejs](https://github.com/spritejs/spritejs)
 
 ## Author
 

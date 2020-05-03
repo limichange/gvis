@@ -7,6 +7,8 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7a5ccbc420b2402381db6900f3fc63fa)](https://www.codacy.com/manual/limichange/gvis?utm_source=github.com&utm_medium=referral&utm_content=limichange/gvis&utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/nextvis/gvis/branch/master/graph/badge.svg)](https://codecov.io/gh/nextvis/gvis)
 [![CircleCI](https://circleci.com/gh/nextvis/gvis.svg?style=svg)](https://circleci.com/gh/nextvis/gvis)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/nextvis/gvis.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/nextvis/gvis/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/nextvis/gvis.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/nextvis/gvis/context:javascript)
 
 A Javascript Canvas Library Powered By Weeb
 

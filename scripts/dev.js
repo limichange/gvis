@@ -2,6 +2,7 @@
 
 const execa = require('execa')
 const chokidar = require('chokidar')
+const fs = require('fs-extra')
 const args = require('minimist')(process.argv.slice(2))
 const target = args.target || args.t
 const formats = args.formats || args.f
@@ -23,6 +24,8 @@ chokidar
       )
 
       console.log(res.stdout)
+
+      await fs.remove(`packages/${target}/dist/packages`)
     } catch (e) {
       console.log(e)
     }

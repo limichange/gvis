@@ -3,6 +3,10 @@
   "version": "0.0.3",
   "description": "",
   "main": "index.js",
+  "module": "dist/canvas-render.esm.js",
+  "types": "dist/canvas-render.d.ts",
+  "unpkg": "dist/canvas-render.global.js",
+  "jsdelivr": "dist/canvas-render.global.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

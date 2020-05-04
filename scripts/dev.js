@@ -9,27 +9,27 @@ const formats = args.formats || args.f
 const sourceMap = args.sourcemap || args.s
 const commit = execa.sync('git', ['rev-parse', 'HEAD']).stdout.slice(0, 7)
 
-chokidar
-  .watch(`packages/${target}/dist/${target}.cjs.js`)
-  .on('change', async (event, path) => {
-    console.log(event, path)
+console.log(`packages/${target}/dist/${target}.cjs.js`)
 
-    try {
-      const res = await execa.command(
-        `api-extractor run -v -c packages/${target}/api-extractor.json`,
-        [],
-        {
-          preferLocal: true,
-        }
-      )
+chokidar.watch(`dist/${target}.esm.js`).on('change', async (event, path) => {
+  console.log(event, path)
 
-      console.log(res.stdout)
+  try {
+    const res = await execa.command(
+      `api-extractor run -v -c api-extractor.json`,
+      [],
+      {
+        preferLocal: true,
+      }
+    )
 
-      await fs.remove(`packages/${target}/dist/packages`)
-    } catch (e) {
-      console.log(e)
-    }
-  })
+    console.log(res.stdout)
+
+    await fs.remove(`dist/packages`)
+  } catch (e) {
+    console.log(e)
+  }
+})
 
 execa(
   'rollup',

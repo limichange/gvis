@@ -25,6 +25,8 @@ export default class Gvis extends Bus {
   constructor(cfg: GvisConfig) {
     super()
 
+    console.log(2)
+
     // check config id
     if (!cfg.el && __DEV__ && !isString(cfg.id)) {
       logger.warn(`Config id is unvalid: ${cfg.id}`)

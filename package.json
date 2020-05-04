@@ -6,7 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "node scripts/dev.js",
+    "dev:all": "lerna run --parallel --stream dev",
+    "dev": "node ./scripts/dev.js -t gvis -f cjs",
     "build": "node --trace-warnings scripts/build.js ",
     "test": "jest --coverage",
     "test:watch": "jest --watch",

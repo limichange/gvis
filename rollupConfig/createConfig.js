@@ -3,7 +3,7 @@ import ts from 'rollup-plugin-typescript2'
 import { createReplacePlugin } from './createReplacePlugin'
 import typescript from 'typescript'
 import json from '@rollup/plugin-json'
-import { resolve, pkg } from './pathUtils'
+import { resolve, pkg, dirname } from './pathUtils'
 
 const packageOptions = pkg.buildOptions || {}
 
@@ -22,8 +22,8 @@ export function createConfig(format, output) {
   const tsPlugin = ts({
     typescript,
     check: true,
-    tsconfig: path.resolve(__dirname, 'tsconfig.json'),
-    cacheRoot: path.resolve(__dirname, 'node_modules/.rts2_cache'),
+    tsconfig: path.resolve(dirname, 'tsconfig.json'),
+    cacheRoot: path.resolve(dirname, 'node_modules/.rts2_cache'),
     tsconfigOverride: {
       compilerOptions: {
         sourceMap: true,
@@ -36,6 +36,7 @@ export function createConfig(format, output) {
 
   return {
     input: resolve(`src/index.ts`),
+    external: Object.keys(pkg.dependencies || {}),
     plugins: [
       json({
         namedExports: false,

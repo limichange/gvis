@@ -3,10 +3,10 @@
   "version": "0.0.3",
   "description": "",
   "main": "index.js",
-  "module": "dist/gvis-bus.esm.js",
-  "types": "dist/gvis-bus.d.ts",
-  "unpkg": "dist/gvis-bus.global.js",
-  "jsdelivr": "dist/gvis-bus.global.js",
+  "module": "dist/bus.esm.js",
+  "types": "dist/bus.d.ts",
+  "unpkg": "dist/bus.global.js",
+  "jsdelivr": "dist/bus.global.js",
   "bugs": {
     "url": "https://github.com/nextvis/gvis/issues"
   },

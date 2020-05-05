@@ -10,19 +10,13 @@ const formats = args.formats || args.f
 const sourceMap = args.sourcemap || args.s
 const commit = execa.sync('git', ['rev-parse', 'HEAD']).stdout.slice(0, 7)
 
-console.log(`packages/${target}/dist/${target}.cjs.js`)
-
 chokidar.watch(`dist/${target}.esm.js`).on('change', async (event, path) => {
   console.log(event, path)
 
   try {
-    const res = await execa.command(
-      `api-extractor run -v -c api-extractor.json`,
-      [],
-      {
-        preferLocal: true,
-      }
-    )
+    await execa.command(`api-extractor run -v -c api-extractor.json`, [], {
+      preferLocal: true,
+    })
 
     console.log(chalk.green(`${target}.d.ts ## ok ##`))
   } catch (e) {

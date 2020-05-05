@@ -25,8 +25,6 @@ export default class Gvis extends Bus {
   constructor(cfg: GvisConfig) {
     super()
 
-    console.log(2)
-
     // check config id
     if (!cfg.el && __DEV__ && !isString(cfg.id)) {
       logger.warn(`Config id is unvalid: ${cfg.id}`)
@@ -44,9 +42,8 @@ export default class Gvis extends Bus {
     // save config
     Object.assign(this.cfg, cfg)
 
-    setTimeout(() => {
-      this.createCanvasElement()
-    })
+    this.canvasEl = this.createCanvasElement()
+    this.render.setContext(this.canvasEl.getContext('2d'))
     this.emit('init')
   }
 
@@ -54,16 +51,14 @@ export default class Gvis extends Bus {
     const el = this.el!
     const { width, height } = el.getBoundingClientRect()
 
-    this.canvasEl = createHTMLElement('canvas', {
+    return createHTMLElement('canvas', {
       parent: this.el,
       width,
       height,
     }) as HTMLCanvasElement
   }
 
-  add() {
-    // todo
-  }
+  addRect(x: number, y: number, w: number, h: number) {}
 
   remove() {
     // todo

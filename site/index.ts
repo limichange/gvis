@@ -1,8 +1,10 @@
-import { Gvis } from 'gvis'
+import { Gvis, logger } from 'gvis'
 import './index.less'
 
-console.log(
-  new Gvis({
-    id: 'app',
-  })
-)
+const gvis = new Gvis({
+  id: 'app',
+})
+
+gvis.addRect(50, 20, 180, 100)
+
+logger.log(gvis)

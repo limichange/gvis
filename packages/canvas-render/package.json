@@ -8,7 +8,7 @@
   "unpkg": "dist/canvas-render.global.js",
   "jsdelivr": "dist/canvas-render.global.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ../../scripts/dev.js -t canvas-render -f esm"
   },
   "keywords": [],
   "author": "limichange",
@@ -28,5 +28,8 @@
       "cjs",
       "global"
     ]
+  },
+  "dependencies": {
+    "@nextvis/core": "^0.0.1"
   }
 }

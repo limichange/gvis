@@ -3,8 +3,12 @@
   "version": "0.0.3",
   "description": "",
   "main": "index.js",
+  "module": "dist/core.esm.js",
+  "types": "dist/core.d.ts",
+  "unpkg": "dist/core.global.js",
+  "jsdelivr": "dist/core.global.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ../../scripts/dev.js -t core -f esm"
   },
   "keywords": [],
   "bugs": {

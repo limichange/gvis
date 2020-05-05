@@ -3,6 +3,7 @@
 const execa = require('execa')
 const chokidar = require('chokidar')
 const fs = require('fs-extra')
+const chalk = require('chalk')
 const args = require('minimist')(process.argv.slice(2))
 const target = args.target || args.t
 const formats = args.formats || args.f
@@ -23,9 +24,7 @@ chokidar.watch(`dist/${target}.esm.js`).on('change', async (event, path) => {
       }
     )
 
-    console.log(res.stdout)
-
-    await fs.remove(`dist/packages`)
+    console.log(chalk.green(`${target}.d.ts ## ok ##`))
   } catch (e) {
     console.log(e)
   }

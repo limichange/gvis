@@ -20,7 +20,7 @@ export default class Gvis extends Bus {
   el: HTMLElement | null = null
   canvasEl: HTMLCanvasElement | null = null
 
-  render = new CanvasRender()
+  render: CanvasRender = new CanvasRender()
 
   constructor(cfg: GvisConfig) {
     super()
@@ -58,7 +58,21 @@ export default class Gvis extends Bus {
     }) as HTMLCanvasElement
   }
 
-  addRect(x: number, y: number, w: number, h: number) {}
+  addRect(x: number, y: number, w: number, h: number) {
+    this.render.addRect(x, y, w, h)
+  }
+
+  addImage() {
+    const image = new Image()
+    image.crossOrigin = 'Anonymous'
+    image.src =
+      '//pbs.twimg.com/media/EXQvNpRUEAEKvnU?format=jpg&name=4096x4096'
+
+    image.addEventListener('load', (e: Event) => {
+      console.log(e)
+      this.render.addImage(image, 30, 30, 300, 300)
+    })
+  }
 
   remove() {
     // todo

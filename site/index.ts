@@ -5,6 +5,8 @@ const gvis = new Gvis({
   id: 'app',
 })
 
-gvis.addRect(50, 20, 180, 100)
+gvis.addImage()
+// gvis.addRect(50, 20, 180, 100)
+// gvis.addRect(150, 200, 180, 120)
 
 logger.log(gvis)

@@ -13,17 +13,10 @@ describe('element image', () => {
       done()
     })
 
-    const imageElement = new ImageElement(
-      'https://raw.githubusercontent.com/nextvis/gvis/master/assets/logo.png',
-      0,
-      0,
-      0,
-      0,
-      callbackFn
-    )
-
-    imageElement.render(ctx!)
+    const imageElement = new ImageElement('image url', 0, 0, 0, 0, callbackFn)
 
     imageElement.imageOnloadHandler()
+
+    imageElement.render(ctx!)
   })
 })

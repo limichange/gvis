@@ -27,16 +27,13 @@ import Gvis from 'gvis'
 
 const gvis = new Gvis({
   el: '#id',
-  width: 200,
-  height: 200,
+  autoSize: true,
 })
 
 givs.addImage({
   url: 'imageURL',
-  size: {
-    width: 200,
-    height: 200,
-  },
+  width: 200,
+  height: 200,
 })
 ```
 

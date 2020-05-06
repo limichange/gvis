@@ -8,6 +8,7 @@ export default class ImageElement extends AbstractElement {
   x: number = 0
   y: number = 0
   isLoad: boolean = false
+  imageOnloadCallback: Function = () => {}
 
   constructor(
     src: string,
@@ -27,11 +28,14 @@ export default class ImageElement extends AbstractElement {
     this.y = y
     this.width = width
     this.height = height
+    this.imageOnloadCallback = callback
 
-    image.addEventListener('load', () => {
-      this.isLoad = true
-      callback(this)
-    })
+    image.onload = this.imageOnloadHandler
+  }
+
+  imageOnloadHandler() {
+    this.isLoad = true
+    this.imageOnloadCallback(this)
   }
 
   render(ctx: CanvasRenderingContext2D) {

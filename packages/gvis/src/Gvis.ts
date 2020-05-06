@@ -62,16 +62,14 @@ export default class Gvis extends Bus {
     this.render.addRect(x, y, w, h)
   }
 
-  addImage() {
-    const image = new Image()
-    image.crossOrigin = 'Anonymous'
-    image.src =
-      '//pbs.twimg.com/media/EXQvNpRUEAEKvnU?format=jpg&name=4096x4096'
-
-    image.addEventListener('load', (e: Event) => {
-      console.log(e)
-      this.render.addImage(image, 30, 30, 300, 300)
-    })
+  addImage(config: {
+    src: string
+    x: number
+    y: number
+    width: number
+    height: number
+  }) {
+    this.render.addImage(config)
   }
 
   remove() {

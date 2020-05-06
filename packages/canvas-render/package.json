@@ -7,9 +7,6 @@
   "types": "dist/canvas-render.d.ts",
   "unpkg": "dist/canvas-render.global.js",
   "jsdelivr": "dist/canvas-render.global.js",
-  "scripts": {
-    "dev": "node ../../scripts/dev.js -t canvas-render -f esm"
-  },
   "keywords": [],
   "author": "limichange",
   "bugs": {

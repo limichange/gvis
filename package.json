@@ -6,13 +6,13 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:all": "lerna run --parallel --stream dev",
-    "dev": "node ./scripts/dev.js -t gvis -f cjs",
+    "dev": "node ./scripts/dev.js -f esm",
     "build": "node --trace-warnings scripts/build.js ",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "ls-lint": "ls-lint",
-    "test:report": "codecov"
+    "test:report": "codecov",
+    "clean:nm": "rm -rf node_modules && npm i"
   },
   "repository": {
     "type": "git",
@@ -53,19 +53,19 @@
     "chokidar": "3.4.0",
     "codecov": "3.6.5",
     "execa": "4.0.0",
-    "jest": "26.0.1",
+    "jest": "26.0.0",
     "jest-canvas-mock": "2.2.0",
     "lerna": "3.20.2",
     "less": "3.11.1",
     "lint-staged": "10.2.2",
-    "lodash": "4.17.15",
+    "lodash": "^4.17.15",
     "minimist": "1.2.5",
     "parcel": "1.12.4",
     "prettier": "2.0.5",
     "rollup": "2.7.6",
     "rollup-plugin-typescript2": "0.27.0",
     "ts-jest": "25.4.0",
-    "ts-node": "8.10.1",
+    "ts-node": "8.9.1",
     "typescript": "3.8.3",
     "yorkie": "2.0.0"
   }

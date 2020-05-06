@@ -1,4 +1,5 @@
 import { AbstractRender } from '@nextvis/core'
+import ImageElement from './element/image'
 
 export default class CanvasRender extends AbstractRender {
   name: string = 'CanvasRender'
@@ -14,14 +15,22 @@ export default class CanvasRender extends AbstractRender {
     this.fill(path2d)
   }
 
-  addImage(
-    image: CanvasImageSource,
-    x: number,
-    y: number,
-    w: number,
-    h: number
-  ) {
-    this._ctx?.drawImage(image, 0, 0, 3000, 3000, x, y, w, h)
+  addImage({
+    src,
+    x,
+    y,
+    width,
+    height,
+  }: {
+    src: string
+    x: number
+    y: number
+    width: number
+    height: number
+  }) {
+    new ImageElement(src, x, y, width, height, (imageElement) => {
+      imageElement.render(this._ctx!)
+    })
   }
 
   fill(path2d: Path2D) {

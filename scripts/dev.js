@@ -4,6 +4,7 @@ const execa = require('execa')
 const chokidar = require('chokidar')
 const lodash = require('lodash')
 const chalk = require('chalk')
+const allTargets = require('./utils/targets')
 const args = require('minimist')(process.argv.slice(2))
 const target = args.target || args.t
 const formats = args.formats || args.f
@@ -27,21 +28,23 @@ chokidar.watch(`dist/${target}.esm.js`).on(
   }, 10000)
 )
 
-execa(
-  'rollup',
-  [
-    '-wc',
-    '--environment',
+allTargets.forEach((t) => {
+  execa(
+    'rollup',
     [
-      `COMMIT:${commit}`,
-      `TARGET:${target}`,
-      `FORMATS:${formats || 'global'}`,
-      sourceMap ? `SOURCE_MAP:true` : ``,
-    ]
-      .filter(Boolean)
-      .join(','),
-  ],
-  {
-    stdio: 'inherit',
-  }
-)
+      '-wc',
+      '--environment',
+      [
+        `COMMIT:${commit}`,
+        `TARGET:${t}`,
+        `FORMATS:${formats || 'global'}`,
+        sourceMap ? `SOURCE_MAP:true` : ``,
+      ]
+        .filter(Boolean)
+        .join(','),
+    ],
+    {
+      stdio: 'inherit',
+    }
+  )
+})

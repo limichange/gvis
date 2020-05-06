@@ -28,7 +28,7 @@ export default class CanvasRender extends AbstractRender {
     width: number
     height: number
   }) {
-    new ImageElement(src, x, y, width, height, (imageElement) => {
+    return new ImageElement(src, x, y, width, height, (imageElement) => {
       imageElement.render(this._ctx!)
     })
   }

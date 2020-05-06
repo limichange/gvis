@@ -1,12 +1,9 @@
 import ImageElement from '../../src/element/image'
+import createCanvas from '../utils/createCanvas'
 
 describe('element image', () => {
   it('download image', (done) => {
-    const canvas = document.createElement('canvas')
-    canvas.width = 500
-    canvas.height = 500
-    document.body.appendChild(canvas)
-    const ctx = canvas.getContext('2d')
+    const { ctx } = createCanvas()
 
     const callbackFn = jest.fn(() => {
       expect(callbackFn).toBeCalled()

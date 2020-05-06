@@ -1,10 +1,10 @@
 import CanvasRender from '../src/CanvasRender'
 import ImageElement from '../src/element/image'
+import createCanvas from './utils/createCanvas'
 
 describe('CanvasRender', () => {
   const canvasRender = new CanvasRender()
-  const canvas = document.createElement('canvas')
-  const ctx = canvas.getContext('2d')
+  const { ctx } = createCanvas()
 
   it('setContext', () => {
     canvasRender.setContext(ctx)

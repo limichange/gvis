@@ -30,7 +30,7 @@ export default class ImageElement extends AbstractElement {
     this.height = height
     this.imageOnloadCallback = callback
 
-    image.onload = this.imageOnloadHandler
+    image.onload = this.imageOnloadHandler.bind(this)
   }
 
   imageOnloadHandler() {

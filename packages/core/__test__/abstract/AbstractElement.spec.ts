@@ -5,6 +5,7 @@ describe('abstract class Element', () => {
     const name = 'PureElement'
 
     class PureElement extends AbstractElement {
+      render(ctx: CanvasRenderingContext2D): void {}
       name: string = name
     }
 

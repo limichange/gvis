@@ -70,6 +70,6 @@
     "yorkie": "2.0.0"
   },
   "dependencies": {
-    "fp-ts": "^2.6.0"
+    "fp-ts": "2.6.0"
   }
 }

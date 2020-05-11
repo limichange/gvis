@@ -39,3 +39,17 @@ export function isInteger(val: unknown): val is number {
     ? Number.isInteger(val as number)
     : isNumber(val) && val % 1 === 0
 }
+
+export function isNull(val: unknown): val is null {
+  return check(val, 'Null')
+}
+
+export function isUndefined(val?: unknown): val is undefined {
+  return check(val, 'Undefined')
+}
+
+export function isPrototype(val: any) {
+  const Ctor = val && val.constructor
+  const proto = (isFunction(Ctor) && Ctor.prototype) || Object.prototype
+  return val === proto
+}

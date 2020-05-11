@@ -7,6 +7,9 @@ import {
   isString,
   isFunction,
   isInteger,
+  isPrototype,
+  isUndefined,
+  isNull,
 } from '../src/type'
 
 describe('gvis utils type', () => {
@@ -44,5 +47,22 @@ describe('gvis utils type', () => {
     expect(isInteger(-12)).toEqual(true)
     expect(isInteger(1.2)).toEqual(false)
     expect(isInteger(-1.2)).toEqual(false)
+  })
+
+  it('check Null', () => {
+    expect(isNull(Object)).toEqual(false)
+    expect(isNull(null)).toEqual(true)
+    expect(isNull(2)).toEqual(false)
+  })
+
+  it('check Undefined', () => {
+    expect(isUndefined()).toEqual(true)
+    expect(isUndefined(undefined)).toEqual(true)
+  })
+
+  it('check Prototype', () => {
+    expect(isPrototype(Object.prototype)).toEqual(true)
+    expect(isPrototype(Array.prototype)).toEqual(true)
+    expect(isPrototype(Array)).toEqual(false)
   })
 })

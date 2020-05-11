@@ -8,10 +8,10 @@ describe('Abstract Base Class', () => {
 
     const test = new Test()
 
-    expect(test.destroyed).toEqual(false)
+    expect(test.isDestroyed()).toEqual(false)
 
     test.destroy()
 
-    expect(test.destroyed).toEqual(true)
+    expect(test.isDestroyed()).toEqual(true)
   })
 })

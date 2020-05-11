@@ -14,11 +14,7 @@ export default function each<T>(
 
   let result
 
-  for (
-    let i = 0, len = (elements as T[]).length;
-    i < len;
-    i++
-  ) {
+  for (let i = 0, len = (elements as T[]).length; i < len; i++) {
     result = func((elements as T[])[i], i)
     if (result === false) {
       break

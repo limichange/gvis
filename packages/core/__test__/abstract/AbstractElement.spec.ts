@@ -6,6 +6,7 @@ describe('abstract class Element', () => {
 
     class PureElement extends AbstractElement {
       render(ctx: CanvasRenderingContext2D): void {}
+      clone() {}
       name: string = name
     }
 

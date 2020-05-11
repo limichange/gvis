@@ -1,5 +1,5 @@
-import Bus from '@nextvis/bus'
+import { AbstractElement } from '.'
 
-export default abstract class AbstractComponent extends Bus {
+export default abstract class AbstractComponent extends AbstractElement {
   abstract name: string
 }

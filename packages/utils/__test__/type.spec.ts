@@ -6,6 +6,7 @@ import {
   isNumber,
   isString,
   isFunction,
+  isInteger,
 } from '../src/type'
 
 describe('gvis utils type', () => {
@@ -35,5 +36,13 @@ describe('gvis utils type', () => {
 
   it('check Function', () => {
     expect(isFunction(() => {})).toEqual(true)
+  })
+
+  it('check Integer', () => {
+    expect(isInteger(0)).toEqual(true)
+    expect(isInteger(12)).toEqual(true)
+    expect(isInteger(-12)).toEqual(true)
+    expect(isInteger(1.2)).toEqual(false)
+    expect(isInteger(-1.2)).toEqual(false)
   })
 })

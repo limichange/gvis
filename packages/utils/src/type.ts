@@ -33,3 +33,9 @@ export function isString(val: unknown): val is string {
 export function isFunction(val: unknown): val is Function {
   return check(val, 'Function')
 }
+
+export function isInteger(val: unknown): val is number {
+  return Number.isInteger
+    ? Number.isInteger(val as number)
+    : isNumber(val) && val % 1 === 0
+}

@@ -43,6 +43,7 @@ export default class Gvis extends Bus {
 
     // save config
     Object.assign(this.cfg, cfg)
+    this.el = cfg.el!
 
     this.canvasEl = this.createCanvasElement()
     this.render.setContext(this.canvasEl.getContext('2d'))
@@ -50,7 +51,7 @@ export default class Gvis extends Bus {
   }
 
   private createCanvasElement() {
-    const el = this.el!
+    const el = this.el
     const { width, height } = el.getBoundingClientRect()
 
     return createHTMLElement('canvas', {

@@ -68,8 +68,5 @@
     "ts-node": "8.9.1",
     "typescript": "3.8.3",
     "yorkie": "2.0.0"
-  },
-  "dependencies": {
-    "fp-ts": "^2.6.0"
   }
 }

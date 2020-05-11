@@ -17,8 +17,8 @@ export default class Gvis extends Bus {
     autoUpdate: true,
   }
 
-  el: HTMLElement | null = null
-  canvasEl: HTMLCanvasElement | null = null
+  el!: HTMLElement
+  canvasEl!: HTMLCanvasElement
 
   render: CanvasRender = new CanvasRender()
 
@@ -31,10 +31,12 @@ export default class Gvis extends Bus {
     }
 
     // find element
-    this.el = cfg.el ?? document.querySelector(`#${cfg.id}`)
+    if (!cfg.el && isString(cfg.id)) {
+      cfg.el = document.querySelector(`#${cfg.id}`) as HTMLElement
+    }
 
     // check element is ok
-    if (!this.el && __DEV__) {
+    if (!cfg.el && __DEV__) {
       logger.warn(`Element not found or is empty: ${cfg.id}`)
       return
     }

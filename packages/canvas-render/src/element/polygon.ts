@@ -5,4 +5,7 @@ export default class Polygon extends AbstractElement {
   render(ctx: CanvasRenderingContext2D): void {
     throw new Error('Method not implemented.')
   }
+  clone(): Polygon {
+    return new Polygon()
+  }
 }

@@ -5,4 +5,7 @@ export default class Line extends AbstractElement {
   render(ctx: CanvasRenderingContext2D): void {
     throw new Error('Method not implemented.')
   }
+  clone(): Line {
+    return new Line()
+  }
 }

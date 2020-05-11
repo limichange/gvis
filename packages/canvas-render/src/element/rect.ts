@@ -5,4 +5,7 @@ export default class Rect extends AbstractElement {
   render(ctx: CanvasRenderingContext2D): void {
     throw new Error('Method not implemented.')
   }
+  clone(): Rect {
+    return new Rect()
+  }
 }

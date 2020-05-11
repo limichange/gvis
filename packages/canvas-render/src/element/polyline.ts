@@ -5,4 +5,7 @@ export default class Polyline extends AbstractElement {
   render(ctx: CanvasRenderingContext2D): void {
     throw new Error('Method not implemented.')
   }
+  clone(): Polyline {
+    return new Polyline()
+  }
 }

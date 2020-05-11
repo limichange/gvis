@@ -16,7 +16,7 @@ export default class ImageElement extends AbstractElement {
     y: number,
     width: number,
     height: number,
-    callback: (imageElement: ImageElement) => void
+    callback?: (imageElement: ImageElement) => void
   ) {
     super()
 
@@ -28,7 +28,7 @@ export default class ImageElement extends AbstractElement {
     this.y = y
     this.width = width
     this.height = height
-    this.imageOnloadCallback = callback
+    this.imageOnloadCallback = callback ?? (() => {})
 
     image.onload = this.imageOnloadHandler.bind(this)
   }
@@ -54,5 +54,9 @@ export default class ImageElement extends AbstractElement {
       this.width,
       this.height
     )
+  }
+
+  clone(): ImageElement {
+    return new ImageElement(this.src, this.x, this.y, this.width, this.height)
   }
 }

@@ -1,4 +1,4 @@
-import Polygon from '../../src/element/Polygon'
+import Polygon from '../../src/element/polygon'
 
 describe('Element Polygon', () => {
   const polygon = new Polygon()

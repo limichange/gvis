@@ -1,4 +1,4 @@
-import Polyline from '../../src/element/Polyline'
+import Polyline from '../../src/element/polyline'
 
 describe('Element Polyline', () => {
   const polyline = new Polyline()

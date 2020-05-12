@@ -1,4 +1,4 @@
-import Path from '../../src/element/Path'
+import Path from '../../src/element/path'
 
 describe('Element Path', () => {
   const path = new Path()

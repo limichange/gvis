@@ -1,4 +1,4 @@
-import Ellipse from '../../src/element/Ellipse'
+import Ellipse from '../../src/element/ellipse'
 
 describe('Element Ellipse', () => {
   const ellipse = new Ellipse()

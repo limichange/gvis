@@ -1,4 +1,4 @@
-import Text from '../../src/element/Text'
+import Text from '../../src/element/text'
 
 describe('Element Text', () => {
   const text = new Text()

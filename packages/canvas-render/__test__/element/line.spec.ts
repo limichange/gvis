@@ -1,4 +1,4 @@
-import Line from '../../src/element/Line'
+import Line from '../../src/element/line'
 
 describe('Element Line', () => {
   const line = new Line()

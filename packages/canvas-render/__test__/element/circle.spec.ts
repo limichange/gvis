@@ -1,4 +1,4 @@
-import Circle from '../../src/element/Circle'
+import Circle from '../../src/element/circle'
 
 describe('Element Circle', () => {
   const circle = new Circle()

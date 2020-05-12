@@ -27,7 +27,7 @@ export default class Gvis extends Bus {
 
     // check config id
     if (!cfg.el && __DEV__ && !isString(cfg.id)) {
-      logger.warn(`Config id is unvalid: ${cfg.id}`)
+      logger.warn(`Config id is invalid: ${cfg.id}`)
     }
 
     // find element

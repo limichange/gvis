@@ -1,5 +1,1 @@
-export {
-  AbstractComponent,
-  AbstractElement,
-  AbstractRender,
-} from './abstract'
+export { AbstractComponent, AbstractElement, AbstractRender } from './abstract'

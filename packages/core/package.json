@@ -20,6 +20,7 @@
     "url": "git+https://github.com/nextvis/gvis.git"
   },
   "dependencies": {
+    "@nextvis/types": "^0.0.3",
     "@nextvis/bus": "^0.0.3",
     "@nextvis/utils": "^0.0.3"
   },

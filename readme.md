@@ -30,7 +30,7 @@ const gvis = new Gvis({
   autoSize: true,
 })
 
-givs.addImage({
+gvis.addImage({
   url: 'imageURL',
   width: 200,
   height: 200,

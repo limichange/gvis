@@ -55,6 +55,8 @@ givs.addImage({
 - [spritejs/spritejs](https://github.com/spritejs/spritejs)
 - [pencil-js/pencil.js](https://github.com/pencil-js/pencil.js)
 - [dbdiagram.io](https://dbdiagram.io/home)
+- [greyhound](https://greyhound.design/)
+- [method.blue](https://method.blue/)
 
 ## Author
 

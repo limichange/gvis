@@ -33,7 +33,7 @@ jobs:
       - *install_deps
       - *save_cache
       - run: npm run ls-lint
-      - run: npm test --ci --runInBand
+      - run: npm run test:ci
       - run: npm run test:report
 
   build:

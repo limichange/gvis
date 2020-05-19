@@ -9,6 +9,7 @@
     "dev": "node ./scripts/dev.js -f esm",
     "build": "node --trace-warnings scripts/build.js ",
     "test": "jest --coverage",
+    "test:ci": "jest --ci --runInBand",
     "test:watch": "jest --watch",
     "ls-lint": "ls-lint",
     "test:report": "codecov",

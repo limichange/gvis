@@ -12,7 +12,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "less": "3.11.1",
+    "less": "3.13.1",
     "parcel": "1.12.4"
   }
 }

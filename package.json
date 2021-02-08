@@ -56,7 +56,7 @@
     "jest-canvas-mock": "2.2.0",
     "lerna": "3.21.0",
     "less": "3.11.1",
-    "lint-staged": "10.2.4",
+    "lint-staged": "10.5.4",
     "lodash": "4.17.15",
     "minimist": "1.2.5",
     "parcel": "1.12.4",

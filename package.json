@@ -57,7 +57,7 @@
     "lerna": "3.21.0",
     "less": "3.11.1",
     "lint-staged": "10.2.4",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "minimist": "1.2.5",
     "parcel": "1.12.4",
     "prettier": "2.0.5",
